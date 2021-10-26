@@ -25,8 +25,6 @@ passwd adam
 
 EDITOR=nano visudo
 
-echo neofetch >> .bashrc
-
 echo "---"
 echo "finished"
 echo "---"
