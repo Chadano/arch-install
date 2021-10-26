@@ -10,7 +10,7 @@ echo adam-vm > /etc/hostname
 
 mv hosts /etc/hosts
 
-pacman -S dhcpcd grub sudo xfce4 xfce4-goodies lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings xorg networkmanager
+pacman -S dhcpcd grub sudo xfce4 xfce4-goodies lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings xorg networkmanager neofetch
 
 grub-install /dev/vda
 
@@ -24,6 +24,8 @@ useradd -m -G wheel adam
 passwd adam
 
 EDITOR=nano visudo
+
+echo neofetch >> .bashrc
 
 echo "---"
 echo "finished"
