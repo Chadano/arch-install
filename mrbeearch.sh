@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dev='/dev/sda'
+dev='/dev/vda'
 umount "$dev"
 printf "o\nn\np\n1\n\n\nw\n" | fdisk "$dev"
 mkfs.ext4 "${dev}1"
