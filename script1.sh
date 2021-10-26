@@ -9,7 +9,7 @@ pacman -Syy
 
 mount /dev/vda1 /mnt
 
-pacstrap /mnt base linux linux-firmware nano
+pacstrap /mnt base linux linux-firmware nano git
 
 genfstab -U /mnt >> /mnt/etc/fstab
 
