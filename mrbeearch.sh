@@ -1,13 +1,13 @@
 #!/bin/bash
 
-dev='/dev/sda'
+dev='/dev/vda'
 umount "$dev"
 printf "o\nn\np\n1\n\n\nw\n" | fdisk "$dev"
 mkfs.ext4 "${dev}1"
 
 pacman -Syy
 
-mount /dev/sda1 /mnt
+mount /dev/vda1 /mnt
 
 pacstrap /mnt base linux linux-firmware nano
 
@@ -25,7 +25,7 @@ echo 'mv hosts /etc/hosts' | arch-chroot /mnt
 
 echo 'pacman -S dhcpcd grub sudo xfce4 xfce4-goodies lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings xorg networkmanager neofetch' | arch-chroot /mnt
 
-echo 'grub-install /dev/sda' | arch-chroot /mnt
+echo 'grub-install /dev/vda' | arch-chroot /mnt
 
 echo 'grub-mkconfig -o /boot/grub/grub.cfg' | arch-chroot /mnt
 
