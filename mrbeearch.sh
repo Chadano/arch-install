@@ -7,7 +7,7 @@ mkfs.ext4 "${dev}1"
 
 pacman -Syy
 
-mount /dev/sda1 /mnt
+mount /dev/vda1 /mnt
 
 pacstrap /mnt base linux linux-firmware nano
 
@@ -27,7 +27,7 @@ mv hosts /etc/hosts
 
 pacman -S dhcpcd grub
 
-grub-install /dev/sda
+grub-install /dev/vda
 
 grub-mkconfig -o /boot/grub/grub.cfg
 
