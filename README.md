@@ -31,8 +31,6 @@ Step 6: Run the script corrisponding to the desktopp environment you wish to use
 
 `./xfce.sh` - Will install the rest of Arch Linux with the XFCE Desktop Environment
 
-`./kde.sh` - Will install the rest of Arch Linux with KDE
-
 Step 7: Exit the chroot and then reboot your system
 
 type `exit` and then type `shutdown` to shutdown your system
