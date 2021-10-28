@@ -10,7 +10,7 @@ echo arch-linux > /etc/hostname
 
 mv hosts /etc/hosts
 
-pacman -S dhcpcd grub sudo plasma kde-applications xorg ssdm networkmanager neofetch
+pacman -S dhcpcd grub sudo plasma kde-applications xorg sddm networkmanager neofetch
 
 grub-install /dev/vda
 
