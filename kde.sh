@@ -10,13 +10,13 @@ echo arch-linux > /etc/hostname
 
 mv hosts /etc/hosts
 
-pacman -S dhcpcd grub sudo plasma kde-applications xorg sddm networkmanager neofetch
+pacman -S dhcpcd grub sudo plasma kde-applications xorg ssdm networkmanager neofetch
 
 grub-install /dev/vda
 
 grub-mkconfig -o /boot/grub/grub.cfg
 
-systemctl enable ssdm
+systemctl enable sddm
 systemctl enable NetworkManager.service
 
 useradd -m -G wheel user
